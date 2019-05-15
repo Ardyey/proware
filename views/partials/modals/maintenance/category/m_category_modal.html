@@ -1,0 +1,125 @@
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Category</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Ex. Books" id="addCat" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-8 col-form-label">Category Status</label>
+                  <div class="col-sm-9">
+                    <select class="catStatus form-control" id="addStatus">
+                      <option value="Active">Active</option>
+                      <option value="Inacvtive">Inactive</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id='saveAddButton'>Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Category</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Ex. Books" id="editCat" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-8 col-form-label">Status</label>
+                  <div class="col-sm-9">
+                    <select class="catStatus form-control" id="editStatus">
+                      <option value="Active">Active</option>
+                      <option value="Inacvtive">Inactive</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id='saveEditButton'>Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Delete Category? </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='deleteButton'>Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showConfirm" tabindex="-1" role="dialog" aria-labelledby="showConfirm" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="actionResult"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

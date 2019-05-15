@@ -1,0 +1,22 @@
+.scrolledTable{ 
+	overflow-y: auto; 
+	clear:both; 
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0.0;
+  }
+}
+
+.card .card-body {
+	position: relative;
+}
+
+.card .card-body h6 {
+	position: absolute;
+	bottom: 10px;
+}

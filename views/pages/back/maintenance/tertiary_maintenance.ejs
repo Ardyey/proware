@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Proware College Students Maintenance</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="stylesheet" href="css/datatables.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="shortcut icon" href="images/Owner.png" />
+
+
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../../partials/_navbar.html -->
+    <%- include('../../../partials/_navbar.html')%>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../../partials/_sidebar.ejs -->
+      <%- include('../../../partials/_sidebar.ejs')%>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <%- include('../../../partials/modals/maintenance/student/m_tertiary_modal.html')%>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Tertiary Student List</h4>
+              <table class="display dataTable" id="tertiaryStudent">
+                <thead>
+                  <tr>
+                    <th>
+                      Student ID
+                    </th>
+                    <th>
+                      First Name
+                    </th>
+                    <th>
+                      Middle Initial
+                    </th>
+                    <th>
+                      Last Name
+                    </th>
+                    <th>
+                      Course
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../../partials/_footer.html -->
+        <%- include('../../../partials/_footer.html')%>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/js/vendor.bundle.addons.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/maintenance/tertiaryStudent.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/misc.js"></script>
+  <script src="js/jquery.inputmask.bundle.js"></script>
+  <!-- endinject -->
+
+
+</body>
+
+</html>

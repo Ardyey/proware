@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Proware Return Order Report</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="stylesheet" href="css/datatables.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="shortcut icon" href="images/Owner.png" />
+
+</head>
+
+<body>
+
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <%- include('../../../partials/_navbar.html')%>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <%- include('../../../partials/_sidebar.ejs')%>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title">
+              <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                <i class="mdi mdi-keyboard-return"></i>
+              </span>
+              Return Order Report
+            </h3>
+            <nav aria-label="breadcrumb">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                  <%- include('../../../partials/_time.html')%>
+                  <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Return Transaction List</h4>
+                <table class="display dataTable" id="return">
+                  <thead>
+                    <tr>
+                      <h4>Export Data</h4>
+                    </tr>
+                    <tr>
+                      <th>
+                        Transaction Number
+                      </th>
+                      <th>
+                        Student ID
+                      </th>
+                      <th>
+                        Date Created
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Return Item List</h4>
+                <table class="display dataTable" id="returnItem">
+                  <thead>
+                    <tr>
+                      <h4>Export Data</h4>
+                    </tr>
+                    <tr>
+                      <th>
+                        Transaction Number
+                      </th>
+                      <th>
+                        Student ID
+                      </th>
+                      <th>
+                        Date Purchased
+                      </th>
+                      <th>
+                        Item Code
+                      </th>
+                      <th>
+                        Item Description
+                      </th>
+                      <th>
+                        Quantity
+                      </th>
+                      <th>
+                        Price
+                      </th>
+                      <th>
+                        OR #
+                      </th>
+                      <th>
+                        Return Reason
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <%- include('../../../partials/_footer.html')%>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/js/vendor.bundle.addons.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/report/returned.js"></script>
+  <script src="js/time.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/misc.js"></script>
+  <!-- endinject -->
+
+
+</body>
+
+</html>

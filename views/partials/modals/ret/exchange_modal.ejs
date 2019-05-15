@@ -1,0 +1,118 @@
+<div class="modal fade" id="exchangeModal" tabindex="-1" role="dialog" aria-labelledby="exchangeModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Exchange Item</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <form id="exchangeForm">
+              <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                      <label class="col-sm-6 col-form-label">Original Item Code</label>
+                      <label class="col-sm-6 col-form-label">Transaction Number</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="origItem" value='<%=itemCode%>' disabled/>
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="trx" value='<%=trx%>' disabled/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                    <label class="col-sm-12 col-form-label">Original Item Description</label>
+                      <div class="col-sm-12">
+                        <textarea class="form-control" id="origDesc" disabled><%=itemDesc%></textarea>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                    <label class="col-sm-5 col-form-label">Quantity</label>
+                    <label class="col-sm-5 col-form-label">Sub Total</label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="origQuantity" value='<%=quantity%>' disabled/>
+                      </div>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="origSubTotal" value='<%=subTotal%>' disabled/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr/>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                      <label class="col-sm-12 col-form-label">New Item Code</label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="newItem" value='' disabled/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                    <label class="col-sm-12 col-form-label">New Item Description</label>
+                      <div class="col-sm-12">
+                        <textarea class="form-control" id="newDesc" disabled></textarea>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                    <label class="col-sm-5 col-form-label">New Quantity</label>
+                    <label class="col-sm-5 col-form-label">Unit Price</label>
+                      <div class="col-sm-5">
+                        <input type="number" min="0" max="10" class="form-control" id="newQuantity" value='0' placeholder="Enter Quantity" min="1" max="10" maxlength="2" onfocus="this.select()"/>
+                      </div>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="unitPrice" value='' disabled/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                    <label class="col-sm-12 col-form-label">Amount to Pay</label>
+                      <div class="col-sm-5">
+                        <input type="number" class="form-control" id="amount" value='' disabled/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group row">
+                    <label class="col-sm-12 col-form-label">Exchange Reason</label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="exchReason" value=''/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="exchangeButton">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showConfirm" tabindex="-1" role="dialog" aria-labelledby="showConfirm" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Item Exchange Successful!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

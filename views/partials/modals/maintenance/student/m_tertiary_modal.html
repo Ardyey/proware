@@ -1,0 +1,188 @@
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Student ID</label>
+                  <div class="col-sm-8">
+                    <input type="text" data-inputmask="'mask': '99999999999'" class="form-control" id="addStudID" placeholder="Ex. 10000123456 or 02000001234" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">First Name</label>
+                  <div class="col-sm-8">
+                    <input data-inputmask-casing="title" type="text" class="form-control" id="addStudFName" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Middle Initial</label>
+                  <div class="col-sm-8">
+                    <input type="text" data-inputmask="'mask': 'A|-'" class="form-control" id="addStudMI" placeholder="Put dash ('-') if not applicable" maxlength="1" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Last Name</label>
+                  <div class="col-sm-8">
+                    <input data-inputmask-casing="title" type="text" class="form-control" id="addStudLName" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Course</label>
+                  <div class="col-sm-8">
+                    <select class="tertiaryCourse form-control" id="addStudCourse">
+                      <option value="" disabled selected>--Select Course--</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='saveAddButton'>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Student ID</label>
+                  <div class="col-sm-8">
+                    <input type="text" data-inputmask="'mask': '99999999999'" class="form-control" id="editStudID" placeholder="Ex. 10000123456 or 02000001234" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">First Name</label>
+                  <div class="col-sm-8">
+                    <input data-inputmask-casing="title" type="text" class="form-control" id="editStudFName" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Middle Initial</label>
+                  <div class="col-sm-8">
+                    <input type="text" data-inputmask="'mask': 'A|-'" class="form-control" id="editStudMI" placeholder="Put dash ('-') if not applicable" maxlength="1" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Last Name</label>
+                  <div class="col-sm-8">
+                    <input data-inputmask-casing="title" type="text" class="form-control" id="editStudLName" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Course</label>
+                  <div class="col-sm-8">
+                    <select class="tertiaryCourse form-control" id="editStudCourse">
+                      <option value="" disabled selected>--Select Course--</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='saveEditButton'>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Delete Student? </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='deleteButton'>Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showConfirm" tabindex="-1" role="dialog" aria-labelledby="showConfirm" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="actionResult"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

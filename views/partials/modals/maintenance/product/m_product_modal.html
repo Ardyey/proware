@@ -1,0 +1,248 @@
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <form id="addForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-8 col-form-label">Category</label>
+                    <div class="col-sm-9">
+                      <select class="form-control productOption" id="addProdType">
+                        <option value="" disabled selected>--Select Product Type--</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-8 col-form-label">Item Code</label>
+                    <div class="col-sm-12">
+                      <input type="text" id="addProdCode" class="form-control" placeholder="Ex. BKSH001-002" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="productDescription">Description</label>
+                <textarea class="form-control" id="addProdDesc" rows="2"></textarea>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-md-4 col-form-label">Price</label>
+                    <div class="col-sm-6 col-md-6">
+                      <input type="number" id="addProdPrice" class="form-control" placeholder="Php" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-md-4 col-form-label">Stock Quantity</label>
+                    <div class="col-sm-6 col-md-6">
+                      <input type="number" id="addProdStock" class="form-control" placeholder="pcs" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Product Course</label>
+                    <div class="col-sm-8">
+                      <select class="prodCourse form-control" id="addProdCourse" multiple>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Add Image?</label>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="changeImage" id="optYes2" value="Yes" onclick="checkRadio2()">
+                      Yes
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="changeImage" id="optNo2" value="No" onclick="checkRadio2()" checked>
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <label>Image</label>
+               <div class="form-group" id="warning2">
+                <blockquote class="blockquote">
+                  <p class="mb-0 text-center text-danger"><em><u><strong>Disabled by default. Choose yes above if image will be added</strong></u></em></p>
+                </blockquote>
+              </div>
+              <div class="custom-file addProdImage" hidden>
+                <input id="addProdImage" name="addProdImage" type="file" class="custom-file-input">
+                <label for="addProdImage" class="prodFileName custom-file-label text-truncate">Choose file...</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='saveAddButton'>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <form id="editForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-8 col-form-label">Category</label>
+                    <div class="col-sm-9">
+                      <select class="form-control productOption" id="editProdType">
+                        <option value="" disabled selected>--Select Product Type--</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-8 col-form-label">Item Code</label>
+                    <div class="col-sm-12">
+                      <input type="text" id="editProdCode" class="form-control" placeholder="Ex. BKSH001-002" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="productDescription">Description</label>
+                <textarea class="form-control" id="editProdDesc" rows="2"></textarea>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-md-4 col-form-label">Stock Quantity</label>
+                    <div class="col-sm-6 col-md-6">
+                      <input type="number" id="editProdStock" class="form-control" placeholder="pcs" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-md-4 col-form-label">Price</label>
+                    <div class="col-sm-6 col-md-6">
+                      <input type="number" id="editProdPrice" class="form-control" placeholder="Php" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Product Course</label>
+                    <div class="col-sm-8">
+                      <select class="prodCourse form-control" id="editProdCourse" multiple="">
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Change Image?</label>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="changeImage" id="optYes" value="Yes" onclick="checkRadio()">
+                      Yes
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="changeImage" id="optNo" value="No" onclick="checkRadio()" checked>
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <label>Image</label>
+              <div class="form-group" id="warning">
+                <blockquote class="blockquote">
+                  <p class="mb-0 text-center text-danger"><em><u><strong>Disabled by default. Choose yes above if image will be replaced</strong></u></em></p>
+                </blockquote>
+              </div>
+              <div class="custom-file editProdImage" hidden>
+                <input id="editProdImage" name="editProdImage" type="file" class="custom-file-input" disabled hidden>
+                <label for="editProdImage" id="editProdFileName" class="prodFileName custom-file-label text-truncate">Choose file...</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='saveEditButton'>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Delete Product? </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='deleteButton'>Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showConfirm" tabindex="-1" role="dialog" aria-labelledby="showConfirm" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="actionResult"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

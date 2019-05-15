@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Proware Sales Report</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="stylesheet" href="css/datatables.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="shortcut icon" href="images/Owner.png" />
+
+</head>
+
+<body>
+
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <%- include('../../../partials/_navbar.html')%>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <%- include('../../../partials/_sidebar.ejs')%>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title">
+              <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                <i class="mdi mdi-chart-bar"></i>
+              </span>
+              Sales Report
+            </h3>
+            <nav aria-label="breadcrumb">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                  <%- include('../../../partials/_time.html')%>
+                  <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Sales List</h4>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group row">
+                    <label class="col-sm-5 col-form-label">Start Date:</label>
+                    <div class="col-sm-5">
+                      <input name="min" class="form-control" id="min" type="text">
+                    </div>
+                    <label class="col-sm-5 col-form-label">End Date:</label>
+                    <div class="col-sm-5">
+                      <input name="max" class="form-control" id="max" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="form-group row">
+                    <button type="button" id="clearDates" class="col-sm-5 btn btn-inverse-primary btn-fw">Clear Dates</button>
+                  </div>
+                </div>
+              </div>
+              <table class="display dataTable" id="sales">
+                <thead>
+                  <tr>
+                    <h4>Export Data</h4>
+                  </tr>
+                  <tr>
+                    <th>
+                      Transaction Number
+                    </th>
+                    <th>
+                      Item Code
+                    </th>
+                    <th>
+                      Item Description
+                    </th>
+                    <th>
+                      Quantity
+                    </th>
+                    <th>
+                      Sales
+                    </th>
+                    <th>
+                      Date Purchased
+                    </th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th style="text-align:right">Total Sales:</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <%- include('../../../partials/_footer.html')%>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/js/vendor.bundle.addons.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/datatables.js"></script>
+  <script src="js/report/sales.js"></script>
+  <script src="js/time.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/misc.js"></script>
+  <!-- endinject -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<nav class="sidebar sidebar-offcanvas nano-content" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <a href="/proware/dashboard" class="nav-link">
+        <div class="nav-profile-text d-flex flex-column">
+          <span class="font-weight-bold mb-2">Welcome, Good Day!</span>
+          <span class="text-secondary text-small " style="width:100% text-align:center">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ADMIN
+          </span>
+        </div>
+        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/proware/dashboard">
+        <span class="menu-title">Dashboard</span>
+        <i class="mdi mdi-home menu-icon"></i>
+      </a>
+    </li>
+    <%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE') {%>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <span class="menu-title">Products</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-cart-plus menu-icon"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="/proware/prod_book">Book<i class="mdi mdi-book-open-page-variant menu-icon"></i></a></li>
+          <li class="nav-item"> <a class="nav-link" href="/proware/prod_proware">Proware<i class="mdi mdi-buffer menu-icon"></i></a></li>
+          <li class="nav-item"> <a class="nav-link" href="/proware/prod_uniform">Uniform<i class="mdi mdi-tshirt-crew menu-icon"></i></a></li>
+        </ul>
+      </div>
+    </li>
+    <%}%>
+    <%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE') {%>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#ui-Maintenance" aria-expanded="false" aria-controls="ui-basic">
+        <span class="menu-title">Maintenance</span>
+        <i class="menu-arrow"></i>
+        <i class="mdi mdi-screwdriver menu-icon"></i>
+      </a>
+      <div class="collapse" id="ui-Maintenance">
+        <ul class="nav flex-column sub-menu">
+          <%if(position === 'Admin') {%>
+          <li class="nav-item">
+            <i class="mdi mdi-contacts menu-icon"></i><span class="menu-title"> User Maintenance </span>
+            <i class="menu-arrow"></i>
+          <li class="nav-item"> <a class="nav-link" href="/proware/user_maintenance">User<i class="mdi mdi-account-settings-variant menu-icon"></i></a></li>
+          <%}%>
+    </li>
+    <%if(position === 'Admin') {%>
+    <li class="nav-item">
+      <i class="mdi mdi-contacts menu-icon"></i>
+      <span class="menu-title"> Students Maintenance </span>
+      <i class="menu-arrow"></i>
+    <li class="nav-item"> <a class="nav-link" href="/proware/SHS_maintenance">SHS Students
+        <i class="mdi mdi-account-multiple menu-icon"></i></a></li>
+    <li class="nav-item"> <a class="nav-link" href="/proware/tertiary_maintenance">Tertiary Students
+        <i class="mdi mdi-account-multiple menu-icon"></i></a></li>
+    <li class="nav-item"> <a class="nav-link" href="/proware/course_strand_maintenance">Course - Strand
+        <i class="mdi mdi-account-multiple menu-icon"></i></a></li>
+    </li>
+    <%}%>
+    <li class="nav-item">
+      <i class="mdi mdi-cart-outline menu-icon"></i>
+      <span class="menu-title"> Product Maintenance </span>
+      <i class="menu-arrow"></i>
+    <li class="nav-item"> <a class="nav-link" href="/proware/product_maintenance">Products
+        <i class="mdi mdi-package-variant menu-icon"></i></a></li>
+    <li class="nav-item"> <a class="nav-link" href="/proware/category_maintenance">Category
+        <i class="mdi mdi-animation menu-icon"></i></a></li>
+    <li class="nav-item"> <a class="nav-link" href="/proware/product_course_maintenance">Product Course
+        <i class="mdi mdi-blur-linear menu-icon"></i></a></li>
+    <li class="nav-item"> <a class="nav-link" href="/proware/update_status">Update Status
+        <i class="mdi mdi-houzz-box menu-icon"></i></a></li>
+    </li>
+    </div>
+    </li>
+    <%}%>
+    <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#monitoring" aria-expanded="false" aria-controls="reports"">
+              <span class="menu-title">Transaction Monitoring</span>
+              <i class="menu-arrow"></i>
+              <i class="mdi mdi-monitor menu-icon"></i>
+            </a>
+            <div class="collapse" id="monitoring">
+              <ul class="nav flex-column sub-menu">
+              <%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE') {%>
+    <li class="nav-item"> <a class="nav-link" href="/proware/monitor_pending">Pending Orders<i class="mdi mdi mdi-calendar-clock menu-icon"></i></a></li>
+    <%}%>
+              <%if(position === 'Admin' || position === 'CASHIER') {%>
+    <li class="nav-item"> <a class="nav-link" href="/proware/monitor_approved">Approved Orders<i class="mdi mdi mdi-clipboard-check menu-icon"></i></a></li>
+    <%}%>
+              <%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE') {%>
+    <li class="nav-item"> <a class="nav-link" href="/proware/monitor_paid">Paid Orders<i class="mdi mdi-counter menu-icon"></i></a></li>
+    <li class="nav-item"> <a class="nav-link" href="/proware/monitor_success">Successful Orders<i class="mdi mdi-checkbox-marked-circle menu-icon"></i></a></li>
+    <!-- <li class="nav-item"> <a class="nav-link" href="/proware/monitor_returns">Return Items<i class="mdi mdi mdi-keyboard-return menu-icon"></i></a></li> -->
+    <li class="nav-item"> <a class="nav-link" href="/proware/monitor_cancelled">Cancelled Orders<i class="mdi mdi mdi-file-excel menu-icon"></i></a></li>
+    <%}%>
+    <%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE' || position === 'CASHIER') {%>
+    <li class="nav-item"> <a class="nav-link" href="/proware/monitor_expired">Expired Orders<i class="mdi mdi mdi-file-excel menu-icon"></i></a></li>
+    <%}%>
+    <%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE') {%>
+  </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+    <a class="nav-link" data-toggle="collapse" href="#ret" aria-expanded="false" aria-controls="reports"">
+              <span class=" menu-title">Return / Exchange Item</span>
+      <i class="menu-arrow"></i>
+      <i class="mdi mdi mdi-keyboard-return menu-icon"></i>
+    </a>
+
+    <div class="collapse" id="ret">
+      <ul class="nav flex-column sub-menu">
+        <li class="nav-item"> <a class="nav-link" href="/proware/exchange_item">Exchange Item &nbsp;<i class="mdi mdi-swap-horizontal menu-icon"></i></a></li>
+    <%}%>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item">
+
+    <a class="nav-link" data-toggle="collapse" href="#exch" aria-expanded="false" aria-controls="reports"">
+              <span class=" menu-title">Exchange Monitoring</span>
+      <i class="menu-arrow"></i>
+      <i class="mdi mdi-swap-horizontal menu-icon"></i>
+    </a>
+
+    <div class="collapse" id="exch">
+      <ul class="nav flex-column sub-menu">
+        <%if(position === 'Admin' || position === 'CASHIER') {%>
+        <li class="nav-item"> <a class="nav-link" href="/proware/exchange_pending">Pending Order &nbsp;<i class="mdi mdi mdi-calendar-clock menu-icon"></i></a></li>
+        <%}%>
+        <%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE') {%>
+        <li class="nav-item"> <a class="nav-link" href="/proware/exchange_paid">Paid Order &nbsp;<i class="mdi mdi-counter menu-icon"></i></a></li>
+        <li class="nav-item"> <a class="nav-link" href="/proware/exchange_success">Success Order &nbsp;<i class="mdi mdi-checkbox-marked-circle menu-icon"></i></a></li>
+        <%}%>
+      </ul>
+    </div>
+  </li>
+
+<%if(position === 'Admin' || position === 'PAMO' || position === 'PROWARE') {%>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="collapse" href="#reports" aria-expanded="false" aria-controls="reports">
+      <span class="menu-title">Reports</span>
+      <i class="menu-arrow"></i>
+      <i class="mdi mdi-note-text menu-icon"></i>
+    </a>
+    <div class="collapse" id="reports">
+      <ul class="nav flex-column sub-menu">
+        <li class="nav-item"> <a class="nav-link" href="/proware/report_sales">Sales Report &nbsp;<i class="mdi mdi-chart-bar menu-icon"></i></a></li>
+        <li class="nav-item"> <a class="nav-link" href="/proware/report_inventory">Inventory Report &nbsp;<i class="mdi mdi-counter menu-icon"></i></a></li>
+        <li class="nav-item"> <a class="nav-link" href="/proware/report_cancelled">Cancellation Reports &nbsp;<i class="mdi mdi mdi-cart-off menu-icon"></i></a></li>
+        <li class="nav-item"> <a class="nav-link" href="/proware/report_exchanged">Exchanged Items Report<i class="mdi mdi-swap-horizontal menu-icon"></i></a></li>
+      </ul>
+    </div>
+  </li>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="collapse" href="#util" aria-expanded="false" aria-controls="reports"">
+              <span class=" menu-title">Activity Logs</span>
+      <i class="menu-arrow"></i>
+      <i class="mdi mdi-table-large menu-icon"></i>
+    </a>
+
+    <div class="collapse" id="util">
+      <ul class="nav flex-column sub-menu">
+        <li class="nav-item"> <a class="nav-link" href="/proware/log_maintenance">Maintenance Module &nbsp;<i class="mdi mdi-screwdriver menu-icon"></i></a></li>
+        <li class="nav-item"> <a class="nav-link" href="/proware/log_monitoring">Monitoring Module &nbsp;<i class="mdi mdi-monitor menu-icon"></i></a></li>
+      </ul>
+    </div>
+  </li>
+  
+  <%}%>
+ <%if(position === 'Admin') {%>
+  <li class="nav-item">
+    <a class="nav-link" href="/proware/reset_password">
+      <span class="menu-title">Reset User Password</span>
+      <i class="mdi mdi-account-key menu-icon"></i>
+    </a>
+  </li>
+  <%}%>
+    <li class="nav-item">
+      <a class="nav-link" href="/proware/search_orders">
+        <span class="menu-title">Search All Orders</span>
+        <i class="mdi mdi-magnify menu-icon"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

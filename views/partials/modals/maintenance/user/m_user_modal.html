@@ -1,0 +1,214 @@
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Emp. ID</label>
+                  <div class="col-sm-9">
+                    <input data-inputmask="'mask': 'AAA9999A'" type="text" class="form-control" id="addEmpID" placeholder="Ex. FVW0001A" required />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Username</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="addUsername" placeholder="Username" required />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Password</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="addPassword" placeholder="Password" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">First Name</label>
+                  <div class="col-sm-9">
+                    <input data-inputmask-casing="title" type="text" class="form-control" id="addFirstName" placeholder="First Name" required />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Last Name</label>
+                  <div class="col-sm-9">
+                    <input data-inputmask-casing="title" type="text" class="text-capitalize form-control" id="addLastName" placeholder="Last Name" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Status</label>
+                  <div class="col-sm-9">
+                    <select class="form-control text-dark" id="addStatus" required>
+                      <option value="" selected disabled>--Select Status--</option>
+                      <option value="Active">Active</option>
+                      <option value="Inactive">Inactive</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Positions</label>
+                  <div class="col-sm-9">
+                    <select class="userPosition text-dark form-control" id="addPosition" required>
+                      <option value="" selected disabled>--Select Position--</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='saveAddButton'>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Emp. ID</label>
+                  <div class="col-sm-9">
+                    <input data-inputmask="'mask': 'AAA9999A'" type="text" class="form-control" id="editEmpID" placeholder="Ex. FVW0001A" required />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Username</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="editUsername" placeholder="Username" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">First Name</label>
+                  <div class="col-sm-9">
+                    <input data-inputmask-casing="title" type="text" class="text-capitalize form-control" id="editFirstName" placeholder="First Name" required />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Last Name</label>
+                  <div class="col-sm-9">
+                    <input data-inputmask-casing="title" type="text" class="text-capitalize form-control" id="editLastName" placeholder="Last Name" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Status</label>
+                  <div class="col-sm-9">
+                    <select class="form-control text-dark" id="editStatus" required>
+                      <option value="" selected disabled>--Select Status--</option>
+                      <option value="Active">Active</option>
+                      <option value="Inactive">Inactive</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="col-md-12">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Positions</label>
+                  <div class="col-sm-9">
+                    <select class="userPosition text-dark form-control" id="editPosition" required>
+                      <option value="" selected disabled>--Select Position--</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='saveEditButton'>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Delete User? </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='deleteButton'>Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showConfirm" tabindex="-1" role="dialog" aria-labelledby="showConfirm" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="actionResult"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

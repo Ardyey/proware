@@ -1,0 +1,149 @@
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <form id="addForm">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Course / Strand Code</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" id="addCode" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Course / Strand Description</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" id="addDescription" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Course / Strand Type</label>
+                  <div class="col-sm-9">
+                      <select class="form-control" id="addType">
+                        <option value="" disabled selected>--Select Product Type--</option>
+                        <option value="Tertiary">Tertiary</option>
+                        <option value="SHS">SHS</option>
+                      </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+</form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id='saveAddButton'>Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Course</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+<form id="editForm">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Course / Strand Code</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" id="editCode" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Course / Strand Description</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="" id="editDescription" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-9 col-form-label">Course / Strand Type</label>
+                  <div class="col-sm-9">
+                      <select class="form-control" id="editType">
+                        <option value="" disabled selected>--Select Product Type--</option>
+                        <option value="Tertiary">Tertiary</option>
+                        <option value="SHS">SHS</option>
+                      </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+</form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id='saveEditButton'>Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> Delete Course / Strand? </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id='deleteButton'>Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showConfirm" tabindex="-1" role="dialog" aria-labelledby="showConfirm" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p id="actionResult"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
